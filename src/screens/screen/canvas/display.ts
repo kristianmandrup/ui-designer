@@ -3,7 +3,7 @@ import {EventAggregator} from 'aurelia-event-aggregator';
 import sortable = require('sortable');
 
 @inject(EventAggregator)
-export class Report {
+export class Canvas {
   ea: EventAggregator;
   reportSheet: any;
 
@@ -17,14 +17,6 @@ export class Report {
   widgets = [];
 
   removeWidget(widget) {
-    let idx = this.widgets.map( (obj, index) => {
-      if( obj.id === widget.id )
-        return index;
-    }).reduce( (prev, current) => {
-      return current || prev;
-    });
-
-    this.widgets.splice(idx, 1);
   }
 
   attached() {

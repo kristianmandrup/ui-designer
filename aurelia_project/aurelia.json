@@ -117,10 +117,6 @@
             "path": "../scripts/text"
           },
           {
-            "name": "sortable",
-            "path": "../node_modules/sortable/index.js"
-          },
-          {
             "name": "aurelia-templating-resources",
             "path": "../node_modules/aurelia-templating-resources/dist/amd",
             "main": "aurelia-templating-resources"
@@ -135,6 +131,21 @@
             "path": "../node_modules/aurelia-testing/dist/amd",
             "main": "aurelia-testing",
             "env": "dev"
+          },
+          {
+            "name": "sortable",
+            "path": "../node_modules/sortable/index.js"
+          },
+          "jquery",
+          {
+            "name": "bootstrap",
+            "path": "../node_modules/bootstrap/dist",
+            "main": "js/bootstrap.min",
+            "deps": ["jquery"],
+            "exports": "$",
+            "resources": [
+              "css/bootstrap.css"
+            ]
           }
         ]
       }

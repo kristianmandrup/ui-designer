@@ -1,3 +1,19 @@
-<template>
-  <h1>${message}</h1>
+<template bindable="router">
+  <require from="bootstrap/css/bootstrap.css"></require>
+  <require from="./styles.css"></require>
+
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="navbar-header">
+      <ul>
+        <li repeat.for="row of router.navigation" class="${row.isActive ? 'active' : ''}">
+          <a href.bind="row.href">${row.title}</a>
+        </li>
+      </ul>
+    </div>    
+  </nav>
+  <div class="page-host">
+    <router-view>
+        <!-- Top level views are rendered here -->
+    </router-view>
+  </div>  
 </template>

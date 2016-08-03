@@ -28,7 +28,7 @@ export class Toolbox {
     new sortable(this.toolboxList, {
       sort: false,
       group: {
-        name: "report",
+        name: "form",
         pull: 'clone',
         put: false
       }
